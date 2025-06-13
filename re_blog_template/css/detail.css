@@ -1,0 +1,159 @@
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.detail-header-font {
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.detail-header-title {
+    font-size: 2.0rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.main-header-line {
+    color: #a6a6a6;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #a6a6a6;
+    padding-bottom: 5px;
+}
+
+/* detail content css */
+.detail-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-img {
+    display: flex;
+    justify-content: center;
+    padding: 35px 0;
+}
+
+.detail-font-list {
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+.detail-category {
+    margin: 50px 0 30px 0;
+    padding: 15px 10px;
+    border: 2px solid #a6a6a6;
+}
+
+/* category box css */
+.detail-category-title {
+    padding-bottom: 35px;
+}
+
+.detail-category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-category-list-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-number {
+    color: #07beb8;
+    font-weight: 500;
+}
+
+.category-data {
+    color: #a6a6a6;
+
+}
+
+/* 댓글 css 시작 부문 */
+.comment-container {}
+
+.comment-header {
+    font-size: 1.2rem;
+    padding: 0 10px 10px;
+    font-weight: 600;
+}
+
+.comment-header span:nth-child(2) {
+    color: #07beb8;
+}
+
+.comment-list-inner {
+    padding: 30px 10px;
+    border-top: 2px solid #a6a6a6;
+
+}
+
+.comment-list-title {
+    padding-bottom: 20px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.comment-list-title span:nth-child(1) {
+    font-weight: 600;
+}
+
+.comment-list-title span:nth-child(2) {
+    color: #a6a6a6;
+    font-size: 0.8rem;
+}
+
+.comment-write {
+    display: flex;
+    border: 1px solid #a6a6a6;
+    flex-direction: column;
+}
+
+.comment-write-info {
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid #a6a6a6;
+}
+
+.input-info {
+    width: 100%;
+    border: none;
+    text-indent: 10px;
+    padding: 5px 0;
+}
+
+.user-id {
+    border-right: 1px solid #a6a6a6;
+}
+
+.comment-write-content {
+    position: relative;
+    padding: 10px;
+}
+
+.comment-write-content-inner {
+    height: 150px;
+}
+
+.comment-write-content-inner input {
+    width: 100%;
+    border: none;
+}
+
+.comment-write-content-inner input::placeholder {}
+
+.comment-btn {
+    text-align: right;
+}
+
+.comment-btn button {
+    border: none;
+    ;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
