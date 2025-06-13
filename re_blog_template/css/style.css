@@ -1,0 +1,198 @@
+/* 전체적인 부분 css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.inner {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.icon-btn {
+    border: none;
+    background: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+a:visited {
+    all: unset;
+}
+
+/* header css */
+.header-container {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+}
+
+.header-inner {
+    height: 80px;
+    background-image: url(/image/bg-header.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+
+.header-title {
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+
+.header-left {
+    display: flex;
+    gap: 10px;
+}
+
+.header-gear {
+    font-size: 1.2rem;
+
+}
+
+.header-right {
+    padding-right: 30px;
+    font-size: 1.6rem;
+}
+
+/* side bar AND main 에 공통 css */
+.content-contanier {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* side bar css */
+.side-continer-cover {
+    width: 170px;
+}
+.side-container {
+    width: 170px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    flex-basis: auto;
+    height: 230px;
+    position: fixed;
+}
+
+.side-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.side-h4 {
+    color: #a6a6a6;
+    font-weight: 500;
+}
+
+.side-gear {
+    border: none;
+    background: none;
+    font-size: 1.4rem;
+}
+
+.side-content {
+    color: #a6a6a6;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* main css */
+.main-container {
+    width: 730px;
+}
+
+.main-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.left-title {
+    font-weight: 600;
+}
+
+.left-number {
+    color: #07beb8;
+    font-weight: 600;
+}
+
+.main-list {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.main-list-inner {
+    width: calc((100% - 30px) / 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-info-inner {
+    padding: 10px;
+}
+
+.list-date {
+    color: #a6a6a6;
+    padding: 30px 0;
+    font-size: 0.8rem;
+}
+
+/* page 넘기는 버튼 css */
+.main-page-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.main-page-number {
+    display: flex;
+    gap: 20px;
+}
+
+.main-page-next {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.next-btn {
+    font-size: 2.0rem;
+}

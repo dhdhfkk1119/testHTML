@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>조정우 블로그 만들기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        input:focus,
+        textarea:focus {
+            outline: none;
+        }
+
+        .detail-header-font {
+            font-weight: 600;
+            padding-bottom: 10px;
+        }
+
+        .detail-header-title {
+            font-size: 2.0rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .main-header-line {
+            color: #a6a6a6;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #a6a6a6;
+            padding-bottom: 5px;
+        }
+
+        /* detail content css */
+        .detail-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail-img {
+            display: flex;
+            justify-content: center;
+            padding: 35px 0;
+        }
+
+        .detail-font-list {
+            padding: 0 10px;
+            font-weight: 500;
+        }
+
+        .detail-category {
+            margin: 50px 0 30px 0;
+            padding: 15px 10px;
+            border: 2px solid #a6a6a6;
+        }
+
+        /* category box css */
+        .detail-category-title {
+            padding-bottom: 35px;
+        }
+
+        .detail-category-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .detail-category-list-inner {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .category-number {
+            color: #07beb8;
+            font-weight: 500;
+        }
+
+        .category-data {
+            color: #a6a6a6;
+
+        }
+
+        /* 댓글 css 시작 부문 */
+        .comment-container {}
+
+        .comment-header {
+            font-size: 1.2rem;
+            padding: 0 10px 10px;
+            font-weight: 600;
+        }
+
+        .comment-header span:nth-child(2) {
+            color: #07beb8;
+        }
+
+        .comment-list-inner {
+            padding: 30px 10px;
+            border-top: 2px solid #a6a6a6;
+
+        }
+
+        .comment-list-title {
+            padding-bottom: 20px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .comment-list-title span:nth-child(1) {
+            font-weight: 600;
+        }
+
+        .comment-list-title span:nth-child(2) {
+            color: #a6a6a6;
+            font-size: 0.8rem;
+        }
+
+        .comment-write {
+            display: flex;
+            border: 1px solid #a6a6a6;
+            flex-direction: column;
+        }
+
+        .comment-write-info {
+            display: flex;
+            flex: 1;
+            border-bottom: 1px solid #a6a6a6;
+        }
+
+        .input-info {
+            width: 100%;
+            border: none;
+            text-indent: 10px;
+            padding: 5px 0;
+        }
+
+        .user-id {
+            border-right: 1px solid #a6a6a6;
+        }
+
+        .comment-write-content {
+            position: relative;
+            padding: 10px;
+        }
+
+        .comment-write-content-inner {
+            height: 150px;
+        }
+
+        .comment-write-content-inner input {
+            width: 100%;
+            border: none;
+        }
+
+        .comment-write-content-inner input::placeholder {}
+
+        .comment-btn {
+            text-align: right;
+        }
+
+        .comment-btn button {
+            border: none;
+            ;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 전체 div  -->
+    <div class="container">
+        <!-- header -->
+        <div class="header-container">
+            <div class="header-inner inner">
+                <div class="header-left">
+                    <a href="index.html"><span class="header-title">Green's Blog</span></a>
+                    <span class="header-gear"><i class="fa-solid fa-gear"></i></span>
+                </div>
+                <div class="header-right">
+                    <a href="https://www.instagram.com/" target="_blank"><span><i
+                                class="fa-brands fa-instagram"></i></span></a>
+                    <a href="https://www.youtube.com/?app=desktop&hl=ko&gl=KR" target="_blank"><span><i
+                                class="fa-brands fa-youtube"></i></span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-contanier inner">
+            <!-- side bar -->
+            <div class="side-continer-cover">
+                <div class="side-container">
+                    <div class="side-inner">
+                        <div class="side-header">
+                            <div><span class="side-h4">전체보기</span></div>
+                            <div><button class="side-gear icon-btn"><i class="fa-solid fa-gear"></i></button></div>
+                        </div>
+                        <div class="side-content">
+                            <div>
+                                <a href="#"><span>Python</span></a>
+                                <span>(12)</span>
+                            </div>
+                            <div>
+                                <a href=""><span>Java</span></a>
+                                <span>(2)</span>
+                            </div>
+                            <div>
+                                <a href=""><span>Ios</span></a>
+                                <span>(8)</span>
+                            </div>
+                            <div>
+                                <a href=""><span>소프트웨어 자료</span></a>
+                                <span>(26)</span>
+                            </div>
+                            <div>
+                                <a href=""><span>자료구조</span></a>
+                                <span>(8)</span>
+                                <span class="new-notice">N</span>
+                            </div>
+                            <div>
+                                <a href=""><span>리눅스</span></a>
+                                <span>(8)</span>
+                            </div>
+                            <div>
+                                <a href=""><span>Git</span></a>
+                                <span>(4)</span>
+                            </div>
+                            <div>
+                                <a href=""><span>자기계발</span></a>
+                                <span>(3)</span>
+                            </div>
+                            <div style="color:black; font-weight: 600;">
+                                <a href=""><span>경영전략</span></a>
+                                <span>(20)</span>
+                            </div>
+                            <div>
+                                <a href=""><span>리더쉽</span></a>
+                                <span>(7)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- detail - main 시작 -->
+            <div class="main-container">
+                <div class="main-inner">
+                    <div class="main-detail-header">
+                        <div class="detail-header-font"><span>경영전략</span></div>
+                        <div class="detail-header-title"><span>팬덤 확보에 성공한 4세대 걸그룹의 차별화 전략</span></div>
+                    </div>
+                    <div class="main-header-line">
+                        <span>2023.12.12</span>
+                        <a href="">URL 복사</a>
+                    </div>
+                    <!-- detail content -->
+                    <div class="detail-content">
+                        <div class="detail-img">
+                            <img src="" alt="" width="480px" height="240px">
+                        </div>
+                        <div class="detail-font-list">
+                            <p style="padding-bottom: 15px">
+                                2022년,K팝에서의 가장 큰 사건은 '걸그룹의 부상'으로 요약할 수 있다. 20여년전인 2009년의 걸그룹 대전을 떠올리게 할 정도로 다수의 아티스트들의
+                                경쟁하고 있다. 대중적인 인기도 높다. 업계전문가들은 종종 '넥스트 BTS는 걸그룹이 될 것이다'라는 의견을 내기도 한다</p>
+                            <p>
+                                아이돌 그룹의 비즈니스 모델은 팬덤이란 강력한 영항력을 바탕으로 구축된다. 그런데 이 팬덤 기반 모델에서는 보이그룹의 성공 사례가
+                                압도적으로 많다. 실제로 걸그룹은 팬덤을 형성하기가 어렵고 그렇기에 규모를 기반으로 하는 콘서트나 투어, 굿즈 판매등의 비즈니스 밸류체인을 구축하기 업렵다는게
+                                업계의 지배적인 통념이다. 하지만 걸그룹의 영향력이 커지고, 팬덤이 조성되고, 앨범 판매량이 증가하면서 걸그룹을 둘러싼 사업적 비전도 확장되고 있다
+                            </p>
+                        </div>
+                        <div class="detail-category">
+                            <div class="detail-category-title">
+                                <a href=""><span style="color:#7d7d7d; font-weight: 600;">'다른분야/경영전략'</span></a>
+                                <a href=""><span style="color:#c4c4c4">카테고리의 다른 글</span></a>
+                            </div>
+                            <div class="detail-category-list">
+                                <div class="detail-category-list-inner">
+                                    <div>
+                                        <a href=""><span>불항 속에서도 기럽 성장꾀하는 전략 5</span></a>
+                                        <span class="category-number">(3)</span>
+                                    </div>
+                                    <div>
+                                        <span class="category-data">2025.12.16</span>
+                                    </div>
+                                </div>
+                                <div class="detail-category-list-inner">
+                                    <div>
+                                        <a href=""><span>CSV 실행, 전략적으로 접근이 필요하다</span></a>
+                                        <span class="category-number">(2)</span>
+                                    </div>
+                                    <div>
+                                        <span class="category-data">2024.02.22</span>
+                                    </div>
+                                </div>
+                                <div class="detail-category-list-inner">
+                                    <div>
+                                        <a href=""><span>스마트한 기업 철수로 값진 거래 성상하기</span></a>
+                                        <span class="category-number"></span>
+                                    </div>
+                                    <div>
+                                        <span class="category-data">2022.11.08</span>
+                                    </div>
+                                </div>
+                                <div class="detail-category-list-inner">
+                                    <div>
+                                        <a href=""><span>위기로 다가오는 기후변화, 기업의 올바른 대응 방법</span></a>
+                                        <span class="category-number">(12)</span>
+                                    </div>
+                                    <div>
+                                        <span class="category-data">2022.05.12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 댓글 부분 -->
+                        <div class="comment-container">
+                            <div class="comment-header">
+                                <span>댓글</span>
+                                <span>3</span>
+                            </div>
+                            <div class="comment-list">
+                                <div class="comment-list-inner">
+                                    <div class="comment-list-title">
+                                        <span>베니스타</span>
+                                        <span>2024.2.12 01:22</span>
+                                    </div>
+                                    <div>
+                                        <span style="color:#a6a6a6; font-weight: 500;">잘 보고 갑니다</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-list">
+                                <div class="comment-list-inner">
+                                    <div class="comment-list-title">
+                                        <span>베니스타</span>
+                                        <span>2024.2.12 01:22</span>
+                                    </div>
+                                    <div>
+                                        <span style="color:#a6a6a6; font-weight: 500;">잘 보고 갑니다</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-list">
+                                <div class="comment-list-inner">
+                                    <div class="comment-list-title">
+                                        <span>베니스타</span>
+                                        <span>2024.2.12 01:22</span>
+                                    </div>
+                                    <div>
+                                        <span style="color:#a6a6a6; font-weight: 500;">잘 보고 갑니다</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment-write">
+                            <div class="comment-write-info">
+                                <div style="flex: 1;"><input type="text" placeholder="이름" class="input-info user-id">
+                                </div>
+                                <div style="flex: 1;"><input type="password" placeholder="비밀번호" class="input-info">
+                                </div>
+                            </div>
+                            <div class="comment-write-content">
+                                <div class="comment-write-content-inner">
+                                    <input name="" id="" placeholder="여러분의 소중한 댓글을 입력해주세요">
+                                </div>
+                                <div class="comment-btn">
+                                    <button>등록</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
