@@ -94,6 +94,7 @@ textarea:focus {
     padding-bottom: 20px;
     display: flex;
     gap: 30px;
+    justify-content: space-between;
     align-items: center;
 }
 
