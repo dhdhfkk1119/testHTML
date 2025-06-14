@@ -152,9 +152,34 @@ textarea:focus {
 
 .comment-btn button {
     border: none;
-    ;
     background-color: black;
     color: white;
     padding: 10px 20px;
     border-radius: 8px;
+}
+
+.comment-passwordInp {
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.3s ease;
+    text-indent: 10px;
+    padding: 2px 0;
+}
+
+.comment-delete-btn {
+    color: black !important;
+    cursor: pointer;
+}
+
+.comment-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-passwordInp.active {
+    display: block;
+    visibility: visible;
+    width: 120px;
 }

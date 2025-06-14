@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <!-- CKEditor CDN -->
+    <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+    <title>조정우 블로그 만들기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .write-content {
+            margin: 40px 0;
+        }
+        .write-btn {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .write-btn button {
+            padding: 10px 60px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+
+        }
+        .write-update {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .write-update button {
+            background-color: #07beb8;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 전체 div  -->
+    <div class="container">
+        <!-- header -->
+        <div class="header-container">
+            <div class="header-inner inner">
+                <div class="header-left">
+                    <a href="index.html"><span class="header-title">Green's Blog</span></a>
+                    <span class="header-gear"><i class="fa-solid fa-gear"></i></span>
+                </div>
+                <div class="header-right">
+                    <a href="https://www.instagram.com/" target="_blank"><span><i
+                                class="fa-brands fa-instagram"></i></span></a>
+                    <a href="https://www.youtube.com/?app=desktop&hl=ko&gl=KR" target="_blank"><span><i
+                                class="fa-brands fa-youtube"></i></span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-contanier inner">
+            <!-- main -->
+            <div class="main-container">
+                <div class="main-inner">
+                    <div>
+                        <select name="">
+                            <option value="" hidden>카테고리</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>
+                            <option value="Ios">Ios</option>
+                            <option value="소프트웨어 자료">소프트웨어 자료</option>
+                            <option value="리눅스">리눅스</option>
+                            <option value="Git">Git</option>
+                            <option value="자기배발">자기배발</option>
+                            <option value="경영전략">경영전략</option>
+                            <option value="리더쉽">리더쉽</option>
+                        </select>
+                    </div>
+                    <div class="write-content">
+                        <textarea name="editor1" id="editor1" rows="10" cols="80">
+                            여기에 글을 작성하세요...
+                        </textarea>
+                    </div>
+                    <div class="write-btn">
+                        <div>
+                            <div><button style="color:#7f7f7f;">취소</button></div>
+                        </div>
+                        <div class="write-update">
+                            <div><button class="registration-btn">등록</button></div>
+                            <div><button class="write-update-btn">수정</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header popup layout-->
+        <div class="popup-container ">
+            <div class="popup-inner">
+                <div class="popup-info">
+                    <div class="blog-title">
+                        <div class="blog-title-name">
+                            <span>블로그명</span>
+                        </div>
+                        <div class="blog-title-input">
+                            <input type="text" placeholder="Green's Blog" class="blog-input changTitle">
+                            <span>한글 영문 숫자 혼용가능</span>
+                        </div>
+                    </div>
+                    <div class="blog-title">
+                        <div class="blog-title-name">
+                            <span>블로그 상단 배경</span>
+                        </div>
+                        <div class="blog-title-input title-file-input">
+                            <div class="title-file-div">
+                                <input type="file" id="file" placeholder="이미지 등록" class="bg-select-btn">
+                                <label for="file" class="bg-select-label">이미지 등록</label>
+                                <div class="file-input"></div>
+                            </div>
+                            <div>
+                                <span>가로 1000px , 세로 80~300px 사이</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-title">
+                        <div class="blog-title-name">
+                            <span>Yotube URL</span>
+                        </div>
+                        <div class="blog-title-input">
+                            <input type="text" placeholder="Green's Blog" class="blog-input instaValue">
+                            <span>User ID 입력</span>
+                        </div>
+                    </div>
+                    <div class="blog-title">
+                        <div class="blog-title-name">
+                            <span>Instagram URL</span>
+                        </div>
+                        <div class="blog-title-input">
+                            <input type="text" placeholder="Green's Blog" class="blog-input youtubeValue">
+                            <span>User ID 입력</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-btn">
+                    <button class="popup-cancle">취소</button>
+                    <button class="popup-okey">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- side layout popup -->
+        <div class="side-bar-layout">
+            <div class="side-bar-inner">
+                <div class="side-category-add">
+                    <button class="side-category-add-btn">+ 추가</button>
+                </div>
+                <div class="side-category-border">
+                    <div class="side-category-list">
+                        <input type="text" value="Python">
+                        <span class="delete-category"><i class="fa-solid fa-circle-minus"></i></span>
+                    </div>
+                    <div class="side-category-list">
+                        <input type="text" value="Python">
+                        <span class="delete-category"><i class="fa-solid fa-circle-minus"></i></span>
+                    </div>
+                    <div class="side-category-list">
+                        <input type="text" value="Python">
+                        <span class="delete-category"><i class="fa-solid fa-circle-minus"></i></span>
+                    </div>
+                    <div class="side-category-list">
+                        <input type="text" value="Python">
+                        <span class="delete-category"><i class="fa-solid fa-circle-minus"></i></span>
+                    </div>
+                    <div class="side-category-list">
+                        <input type="text" value="Python">
+                        <span class="delete-category"><i class="fa-solid fa-circle-minus"></i></span>
+                    </div>
+                </div>
+                <div class="side-bar-notice">
+                    <p class="notice-span">-카테고리는 최대 20개 까지만 설정 가능</p>
+                    <p class="notice-span">-글자 수는 20자 이내 (공백 포함)</p>
+                </div>
+                <div class="side-bar-btn">
+                    <button class="side-cancle">취소</button>
+                    <button class="side-okey">완료</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // 웹 글쓰기 에디터
+    // CKEditor 초기화
+    CKEDITOR.replace('editor1');
+</script>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 
     <title>조정우 블로그 만들기</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -20,7 +21,7 @@
         <div class="header-container">
             <div class="header-inner inner">
                 <div class="header-left">
-                    <a href="#"><span class="header-title">Green's Blog</span></a>
+                    <a href="index.html"><span class="header-title">Green's Blog</span></a>
                     <span class="header-gear"><i class="fa-solid fa-gear"></i></span>
                 </div>
                 <div class="header-right">
@@ -96,7 +97,7 @@
                             <span class="left-number">20</span>
                         </div>
                         <div class="main-header-rigth">
-                            <button class="icon-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <a href="board_write.html" class="icon-btn"><i class="fa-solid fa-pen-to-square"></i></a>
                         </div>
                     </div>
                     <div class="main-list">
@@ -248,16 +249,16 @@
                     <div class="main-page-btn">
                         <!-- page number -->
                         <div class="main-page-number">
-                            <span>1</span>
-                            <span>2</span>
-                            <span>3</span>
-                            <span>4</span>
-                            <span>5</span>
-                            <span>6</span>
-                            <span>7</span>
-                            <span>8</span>
-                            <span>9</span>
-                            <span>10</span>
+                            <a href=""><span>1</span></a>
+                            <a href=""><span>2</span></a>
+                            <a href=""><span>3</span></a>
+                            <a href=""><span>4</span></a>
+                            <a href=""><span>5</span></a>
+                            <a href=""><span>6</span></a>
+                            <a href=""><span>7</span></a>
+                            <a href=""><span>8</span></a>
+                            <a href=""><span>9</span></a>
+                            <a href=""><span>10</span></a>
                         </div>
                         <!-- page Next -->
                         <div class="main-page-next">
@@ -265,6 +266,98 @@
                             <span class="next-btn"><i class="fa-solid fa-angle-right"></i></span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- header popup layout-->
+        <div class="popup-container ">
+            <div class="popup-inner">
+                <div class="popup-info">
+                    <div class="blog-title">
+                        <div class="blog-title-name">
+                            <span>블로그명</span>
+                        </div>
+                        <div class="blog-title-input">
+                            <input type="text" placeholder="Green's Blog" class="blog-input changTitle">
+                            <span>한글 영문 숫자 혼용가능</span>
+                        </div>
+                    </div>
+                    <div class="blog-title">
+                        <div class="blog-title-name">
+                            <span>블로그 상단 배경</span>
+                        </div>
+                        <div class="blog-title-input title-file-input">
+                            <div class="title-file-div">
+                                <input type="file" id="file" placeholder="이미지 등록" class="bg-select-btn">
+                                <label for="file" class="bg-select-label">이미지 등록</label>
+                                <div class="file-input"></div>
+                            </div>
+                            <div>
+                                <span>가로 1000px , 세로 80~300px 사이</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-title">
+                        <div class="blog-title-name">
+                            <span>Yotube URL</span>
+                        </div>
+                        <div class="blog-title-input">
+                            <input type="text" placeholder="Green's Blog" class="blog-input instaValue">
+                            <span>User ID 입력</span>
+                        </div>
+                    </div>
+                    <div class="blog-title">
+                        <div class="blog-title-name">
+                            <span>Instagram URL</span>
+                        </div>
+                        <div class="blog-title-input">
+                            <input type="text" placeholder="Green's Blog" class="blog-input youtubeValue">
+                            <span>User ID 입력</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-btn">
+                    <button class="popup-cancle">취소</button>
+                    <button class="popup-okey">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- side layout popup -->
+        <div class="side-bar-layout">
+            <div class="side-bar-inner">
+                <div class="side-category-add">
+                    <button class="side-category-add-btn">+ 추가</button>
+                </div>
+                <div class="side-category-border">
+                    <div class="side-category-list">
+                        <input type="text" value="Python">
+                        <span class="delete-category"><i class="fa-solid fa-circle-minus"></i></span>
+                    </div>
+                    <div class="side-category-list">
+                        <input type="text" value="Python">
+                        <span class="delete-category"><i class="fa-solid fa-circle-minus"></i></span>
+                    </div>
+                    <div class="side-category-list">
+                        <input type="text" value="Python">
+                        <span class="delete-category"><i class="fa-solid fa-circle-minus"></i></span>
+                    </div>
+                    <div class="side-category-list">
+                        <input type="text" value="Python">
+                        <span class="delete-category"><i class="fa-solid fa-circle-minus"></i></span>
+                    </div>
+                    <div class="side-category-list">
+                        <input type="text" value="Python">
+                        <span class="delete-category"><i class="fa-solid fa-circle-minus"></i></span>
+                    </div>
+                </div>
+                <div class="side-bar-notice">
+                    <p class="notice-span">-카테고리는 최대 20개 까지만 설정 가능</p>
+                    <p class="notice-span">-글자 수는 20자 이내 (공백 포함)</p>
+                </div>
+                <div class="side-bar-btn">
+                    <button class="side-cancle">취소</button>
+                    <button class="side-okey">완료</button>
                 </div>
             </div>
         </div>
